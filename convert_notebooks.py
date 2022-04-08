@@ -6,7 +6,7 @@ Ignore hash files and force conversion of all notebooks:
 pipenv run python convert_notebooks.py --force
 """
 
-POSTS_DIRECTORY = "_posts/notebooks"
+POSTS_DIRECTORY = "_posts"
 NOTEBOOKS_DIRECTORY = "_notebooks"
 ASSETS_DIRECTORY = "assets/notebooks"
 REPLACEMENT_STRINGS = [("<IPython.core.display.Javascript object>", "")]
