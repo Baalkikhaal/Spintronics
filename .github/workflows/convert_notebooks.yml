@@ -3,7 +3,7 @@ name: Convert Notebooks
 on:
   push:
     branches:
-      - main
+      - gh-pages
 
 jobs:
   build:
