@@ -69,6 +69,8 @@ lambda_xrr
 
 ## My TeX \newcommands
 
+{% comment %} 
+
 {% raw %} 
 
 $$
@@ -81,6 +83,7 @@ $$
 
 {% endraw %} 
 
+{% endcomment %} 
 
 ## Classical theory of refractive index
 
