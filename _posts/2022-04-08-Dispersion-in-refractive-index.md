@@ -69,7 +69,7 @@ lambda_xrr
 
 ## My TeX \newcommands
 
-{% comment %} 
+{% raw %} 
 
 $$
 \newcommand{\myScaSub}[2]{{#1}_\mathrm{#2}}
@@ -79,7 +79,7 @@ $$
 \newcommand{\myVec}[1]{\mathbf{ { \mathrm{#1} } } }
 $$
 
-{% endcomment %} 
+{% endraw %} 
 
 
 ## Classical theory of refractive index
