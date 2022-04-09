@@ -3,7 +3,9 @@ layout: post
 title: Dispersion in refractive index
 tags: xrr
 published: true
----{% include mathjax.html %}
+---
+{% include mathjax.html %}
+
 # Dispersion in refractive index
 
 In this notebook, we visualize how the refractive index of Platinum varies with the wavelength of photon. This variation is called dispersion. Characteristic features include
@@ -76,6 +78,8 @@ $$
 $$
 \newcommand{\myVec}[1]{\mathbf{ { \mathrm{#1} } } }
 $$
+
+{% endcomment %} 
 
 
 ## Classical theory of refractive index
