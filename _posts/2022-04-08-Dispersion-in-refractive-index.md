@@ -146,7 +146,7 @@ $$
 so that
 
 $$
-\chi (\omega) = \frac{N e^2 }{{m \epsilon}_{0}} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
+\chi (\omega) = \frac{N e^2 }{m {\epsilon}_{0}} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
 $$
 
 ### Relative permitivity
@@ -172,7 +172,7 @@ $$
 If we define the plasma frequency ${\omega}_{p}$ as
 
 $$
-{\omega}_{p}^2 = \frac{N e^2 }{{m \epsilon}_{0}},
+{\omega}_{p}^2 = \frac{N e^2 }{m {\epsilon}_{0}},
 $$
 
 then
