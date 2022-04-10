@@ -22,7 +22,7 @@ import numpy as np
 from scipy.constants import pi, Avogadro, physical_constants
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-mpl.style.use('../../../myMatplotlibStylesheet.mplstyle')
+mpl.style.use('../assets/matplotlib/myMatplotlibStylesheet.mplstyle')
 ```
 
 
@@ -128,25 +128,25 @@ $$
 This displacement gives rise to a dipole moment with the same frequency given by
 
 $$
-\myScaSub{\mu}{e} = -e x_{0}(\omega),
+{\mu}_{e} = -e x_{0}(\omega),
 $$
 
 so that if the number density of electrons is $N$, then the polarization, the total dipole moment per unit volume is given by
 
 $$
-P(\omega) = N \myScaSub{\mu}{e} = - N ex_{0}(\omega)
+P(\omega) = N {\mu}_{e} = - N ex_{0}(\omega)
 $$
 
 This polarization can be expressed as linear response to the applied electric field with constant of proportionality, the susceptibility $\chi$ given by
 
 $$
-P(\omega) = \myScaSub{\epsilon}{0} \chi (\omega) E_{0}(\omega),
+P(\omega) = {\epsilon}_{0} \chi (\omega) E_{0}(\omega),
 $$
 
 so that
 
 $$
-\chi (\omega) = \frac{N e^2 }{\myScaSub{m \epsilon}{0}} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
+\chi (\omega) = \frac{N e^2 }{{m \epsilon}_{0}} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
 $$
 
 ### Relative permitivity
@@ -154,31 +154,31 @@ $$
 Now this polarization leads to difference in the electric field $\myVec{E}$ and the displacement $\myVec{D}$ given by the Maxwell's equation
 
 $$
-\myVec{D} = \myScaSub{\epsilon}{0}\myVec{E} + \myVec{P}
+\myVec{D} = {\epsilon}_{0}\myVec{E} + \myVec{P}
 $$
 
-As a result, the response of a dielectric medium is polarization. This effect is experimentally measured in terms of relative permitivity $\myScaSub{\epsilon}{r}$ given by
+As a result, the response of a dielectric medium is polarization. This effect is experimentally measured in terms of relative permitivity ${\epsilon}_{r}$ given by
 
 $$
-\myVec{D} = \myScaSub{\epsilon}{r}\myScaSub{\epsilon}{0}\myVec{E},
+\myVec{D} = {\epsilon}_{r}{\epsilon}_{0}\myVec{E},
 $$
 
 so that
 
 $$
-\myScaSub{\epsilon}{r}(\omega) = 1 + \chi (\omega) 
+{\epsilon}_{r}(\omega) = 1 + \chi (\omega) 
 $$
 
-If we define the plasma frequency $\myScaSub{\omega}{p}$ as
+If we define the plasma frequency ${\omega}_{p}$ as
 
 $$
-\myScaSub{\omega}{p}^2 = \frac{N e^2 }{\myScaSub{m \epsilon}{0}},
+{\omega}_{p}^2 = \frac{N e^2 }{{m \epsilon}_{0}},
 $$
 
 then
 
 $$
-\myScaSub{\epsilon}{r}(\omega) = 1 + \frac{\myScaSub{\omega}{p}^2}{\omega^2 - \omega_0^2 + \iota \eta \omega}
+{\epsilon}_{r}(\omega) = 1 + \frac{{\omega}_{p}^2}{\omega^2 - \omega_0^2 + \iota \eta \omega}
 $$
 
 > This important equation says that relativity permitivity depends on the frequency of the field as well as the material's plasma frequency and damping factor.
@@ -188,49 +188,49 @@ $$
 Using the typical values of [plasma frequency](../basics/optical_properties_of_metals.ipynb#Estimate-of-plasma-frequency), [damping factor](../basics/optical_properties_of_metals.ipynb#Estimate-of-damping-factor), and $\omega_0 = 0$ for metals, we have
 
 $$
-\myScaSub{\omega}{p} \sim 3 \,\mathrm{PHz},
+{\omega}_{p} \sim 3 \,\mathrm{PHz},
 $$
 
 $$
-\eta \sim 0.1 \myScaSub{\omega}{p},
+\eta \sim 0.1 {\omega}_{p},
 $$
 
 so that
 
 $$
-\myScaSub{\epsilon}{r} = 1 + \frac{\myScaSub{\omega}{p}^2}{- \omega^2  + \iota \eta \omega}
+{\epsilon}_{r} = 1 + \frac{{\omega}_{p}^2}{- \omega^2  + \iota \eta \omega}
 $$
 
 If we resolve this complex quantity into real and imaginary components as
 
 $$
-\myScaSub{\epsilon}{r} = \myScaSub{\epsilon}{real}  + \iota \myScaSub{\epsilon}{imag},
+{\epsilon}_{r} = {\epsilon}_{real}  + \iota {\epsilon}_{imag},
 $$
 
 where
 
 $$
-\myScaSub{\epsilon}{real} = 1 - \frac{\myScaSub{\omega}{p}^2}{\omega^2  + \eta^2},
+{\epsilon}_{real} = 1 - \frac{{\omega}_{p}^2}{\omega^2  + \eta^2},
 $$
 
 and
 
 $$
-\myScaSub{\epsilon}{imag} = -  \frac{\myScaSub{\omega}{p}^2}{\omega}\frac{\eta}{\omega^2  + \eta^2}.
+{\epsilon}_{imag} = -  \frac{{\omega}_{p}^2}{\omega}\frac{\eta}{\omega^2  + \eta^2}.
 $$
 
 In the special case of X-rays, for a wavelength of $1.54 \,\mathrm{A}^\circ$, the frequency is
 
-nearly $2000 \, \mathrm{PHz} \sim 650 \myScaSub{\omega}{p}$. So unless there is anomalous dispersion, we have
+nearly $2000 \, \mathrm{PHz} \sim 650 {\omega}_{p}$. So unless there is anomalous dispersion, we have
 
 $$
-\myScaSub{\epsilon}{real} = 1 - \frac{1}{650^2  + 0.1^2} = 1- 2.4\cdot 10^{-6},
+{\epsilon}_{real} = 1 - \frac{1}{650^2  + 0.1^2} = 1- 2.4\cdot 10^{-6},
 $$
 
 and
 
 $$
-\myScaSub{\epsilon}{imag} = -  \frac{1}{650}\frac{0.1}{650^2  + 0.1^2} = -3.6\cdot 10^{-10}.
+{\epsilon}_{imag} = -  \frac{1}{650}\frac{0.1}{650^2  + 0.1^2} = -3.6\cdot 10^{-10}.
 $$
 
 
@@ -335,7 +335,7 @@ M & \frac{5}{2}
 
 ```python
 #%% Extract the data
-raw_data_pt = 'pt.nff'     # atomic scattering factors
+raw_data_pt = '../assets/raw_data/pt.nff'     # atomic scattering factors
 data = np.loadtxt(raw_data_pt, skiprows=1, unpack=True)
 ```
 
@@ -415,7 +415,7 @@ ax.plot(energies[energies > x_min], f1s[energies > x_min], '-', label=r'$f_1^\ma
 ax.plot(energies[energies> x_min], f2s[energies> x_min], '-', label=r'$f_2^\mathrm{Pt}$')
 
 ax.axvline(energy_CuKa, color='C2')
-ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,\r{A}$ ', transform=ax.get_xaxis_transform(),
+ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,A\!^{\circ}$ ', transform=ax.get_xaxis_transform(),
         rotation='vertical')
 
 ax.axhline(z_pt, color='C3', ls = '--')
@@ -468,8 +468,8 @@ ax.set_ylabel(r'$f_1, f_2$')
 
 
 ```python
-fig.savefig('dispersion_scattering_factor_Pt.png')
-fig.savefig('dispersion_scattering_factor_Pt.pdf')
+fig.savefig('../assets/images/dispersion_scattering_factor_Pt.png')
+fig.savefig('../assets/images/dispersion_scattering_factor_Pt.pdf')
 ```
 
 
@@ -490,7 +490,7 @@ ax.plot(lambdas[lambdas < lambda_max]/1e-10, f1s[lambdas < lambda_max], '-', lab
 ax.plot(lambdas[lambdas < lambda_max]/1e-10, f2s[lambdas < lambda_max], '-', label=r'$f_2^\mathrm{Pt}$')
 
 ax.axvline(lambda_xrr/1e-10, color='C2')
-ax.text(lambda_xrr/1e-10, 0.2, r'$E=8.05$ keV $\equiv 1.54\,\r{A}$ ', transform=ax.get_xaxis_transform(),
+ax.text(lambda_xrr/1e-10, 0.2, r'$E=8.05$ keV $\equiv 1.54\,A\!^{\circ}$ ', transform=ax.get_xaxis_transform(),
         rotation='vertical')
 
 ax.axhline(z_pt, color='C3', ls = '--')
@@ -510,7 +510,7 @@ minor_ticks = mpl.ticker.LogLocator(base=10.0, subs=np.arange(1, 10), numticks=1
 #ax.yaxis.set_major_locator(major_ticks)
 #ax.yaxis.set_minor_locator(minor_ticks)
 
-ax.set_xlabel(r'$\lambda$ (in $\r{A}$)')
+ax.set_xlabel(r'$\lambda$ (in $A\!^{\circ}$)')
 ax.set_ylabel(r'$f_1, f_2$')
 
 ```
@@ -536,7 +536,7 @@ $$
 \delta + \iota \beta =  \frac{r_e \lambda^2 N_A}{2\pi M_a}  \rho  \left( f_1 + \iota f_2 \right)
 $$
 
-where $\myScaSub{M}{a}$ is the atomic mass, $\rho$ is the density of material in \si{\gram\per\centi\metre\cubed}, $\myScaSub{r}{e} = 2.818\, \mathrm{nm}$ is the classical radius of electron, $\lambda=$ 1.54 Å is the wavelength of photon. This gives a relation between the atomic scattering factors, the density and the refractive index as
+where ${M}_{a}$ is the atomic mass, $\rho$ is the density of material in \si{\gram\per\centi\metre\cubed}, ${r}_{e} = 2.818\, \mathrm{nm}$ is the classical radius of electron, $\lambda=$ 1.54 Å is the wavelength of photon. This gives a relation between the atomic scattering factors, the density and the refractive index as
 
 $$
 \delta + \iota \beta =  6.406 \cdot 10^{-6}  \rho \frac{  f_1 + \iota f_2 }{M_a}
@@ -781,7 +781,7 @@ ax.plot(energies[energies > x_min], deltas[energies > x_min], '-', label=r'$\del
 ax.plot(energies[energies> x_min], betas[energies> x_min], '-', label=r'$\beta_\mathrm{Pt}$')
 
 ax.axvline(energy_CuKa, color='C2')
-ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,\r{A}$ ', transform=ax.get_xaxis_transform(),
+ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,A\!^{\circ}$ ', transform=ax.get_xaxis_transform(),
         rotation='vertical')
 
 ax.legend()
@@ -816,8 +816,8 @@ ax.set_ylabel(r'$n(E)= 1 - \delta(E) + i \beta(E)$')
 
 
 ```python
-fig.savefig('dispersion_refractive_index_Pt.png')
-fig.savefig('dispersion_refractive_index_Pt.pdf')
+fig.savefig('../assets/images/dispersion_refractive_index_Pt.png')
+fig.savefig('../assets/images/dispersion_refractive_index_Pt.pdf')
 ```
 
 
@@ -845,7 +845,7 @@ Let us plot them.
 
 
 ```python
-raw_data_n = 'raw_data_refractive_index_Pt.txt'
+raw_data_n = '../assets/raw_data/raw_data_refractive_index_Pt.txt'
 ```
 
 
@@ -875,7 +875,7 @@ ax.plot(energies, deltas, '-', label=r'$\delta_\mathrm{Pt}$')
 ax.plot(energies, betas, '-', label=r'$\beta_\mathrm{Pt}$')
 
 ax.axvline(energy_CuKa, color='C2')
-ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,\r{A}$ ', transform=ax.get_xaxis_transform(),
+ax.text(energy_CuKa, 0.2, r'$E=8.05$ keV $\equiv 1.54\,A\!^{\circ}$ ', transform=ax.get_xaxis_transform(),
         rotation='vertical')
 
 ax.legend()
@@ -905,8 +905,8 @@ fig.subplots_adjust(left=0.25, top=0.9)
 
 
 ```python
-fig.savefig('refractive_index_Pt.png')
-fig.savefig('refractive_index_Pt.pdf')
+fig.savefig('../assets/images/refractive_index_Pt.png')
+fig.savefig('../assets/images/refractive_index_Pt.pdf')
 ```
 
 ## Comparison of refractive indices of Co and Pt
@@ -916,12 +916,12 @@ Let us compare the refractive indices of different metals.
 
 ```python
 raw_datas = [
-                'raw_data_refractive_index_Ta.txt',
-                'raw_data_refractive_index_Pt.txt',
-                'raw_data_refractive_index_Co.txt',
-                #'raw_data_refractive_index_Cu.txt',
-                'raw_data_refractive_index_Fe.txt',
-                'raw_data_refractive_index_B.txt'
+                '../assets/raw_data/raw_data_refractive_index_Ta.txt',
+                '../assets/raw_data/raw_data_refractive_index_Pt.txt',
+                '../assets/raw_data/raw_data_refractive_index_Co.txt',
+                #'../assets/raw_data/raw_data_refractive_index_Cu.txt',
+                '../assets/raw_data/raw_data_refractive_index_Fe.txt',
+                '../assets/raw_data/raw_data_refractive_index_B.txt'
             ]
 labels = [
             r'$\delta_\mathrm{Ta}$',
@@ -979,8 +979,8 @@ fig.subplots_adjust(left=0.25, top=0.9)
 
 
 ```python
-fig.savefig('deltas_Ta_Pt_Co_Fe_B.png')
-fig.savefig('deltas_Ta_Pt_Co_Fe_B.pdf')
+fig.savefig('../assets/images/deltas_Ta_Pt_Co_Fe_B.png')
+fig.savefig('../assets/images/deltas_Ta_Pt_Co_Fe_B.pdf')
 ```
 
 ### Refractive index of synthetic $Co_3FeB$
@@ -1002,9 +1002,9 @@ $$
 
 ```python
 raw_datas = [
-                'raw_data_refractive_index_Cu.txt',
-                'raw_data_refractive_index_Co.txt',
-                'raw_data_refractive_index_CoFeB.txt'            ]
+                '../assets/raw_data/raw_data_refractive_index_Cu.txt',
+                '../assets/raw_data/raw_data_refractive_index_Co.txt',
+                '../assets/raw_data/raw_data_refractive_index_CoFeB.txt'            ]
 labels = [
             r'$\delta_\mathrm{Cu}$',
             r'$\delta_\mathrm{Co}$',
@@ -1126,7 +1126,7 @@ a_pt
 
 
 
-    21751588784184.492
+    21752010388129.203
 
 
 
@@ -1155,7 +1155,7 @@ rho_pt_estimate
 
 
 
-    15704451.3870913
+    15711037.683658438
 
 
 
@@ -1164,8 +1164,3 @@ The dispersion of atomic scattering factor for atomic species $s$ extracted from
 $$
 f_1 = \frac{\delta}{A_{s} \lambda^2}.
 $$
-
-
-```python
-
-```
