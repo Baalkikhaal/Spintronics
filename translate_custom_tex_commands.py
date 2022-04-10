@@ -41,7 +41,8 @@ def substitute_pattern(string):
     
     for match in re.findall(pattern, string):
         variables = re.findall("{[^}]+}", match)
-        substitute = "{}_{}".format(variables[0], variables[1])
+        print(variables)
+        substitute = "{}_{}".format(variables[0][1:-1], variables[1][1:-1])
         substitutes.append(substitute)
     
     
