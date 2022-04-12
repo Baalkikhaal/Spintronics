@@ -128,25 +128,25 @@ $$
 This displacement gives rise to a dipole moment with the same frequency given by
 
 $$
-{\mu}_{e} = -e x_{0}(\omega),
+\mu_e = -e x_{0}(\omega),
 $$
 
 so that if the number density of electrons is $N$, then the polarization, the total dipole moment per unit volume is given by
 
 $$
-P(\omega) = N {\mu}_{e} = - N ex_{0}(\omega)
+P(\omega) = N \mu_e = - N ex_{0}(\omega)
 $$
 
 This polarization can be expressed as linear response to the applied electric field with constant of proportionality, the susceptibility $\chi$ given by
 
 $$
-P(\omega) = {\epsilon}_{0} \chi (\omega) E_{0}(\omega),
+P(\omega) = \epsilon_0 \chi (\omega) E_{0}(\omega),
 $$
 
 so that
 
 $$
-\chi (\omega) = \frac{N e^2 }{m {\epsilon}_{0}} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
+\chi (\omega) = \frac{N e^2 }{m \epsilon_0} \frac{1}{\omega_0^2 - \omega^2 + \iota \eta \omega}
 $$
 
 ### Relative permitivity
@@ -154,31 +154,31 @@ $$
 Now this polarization leads to difference in the electric field $\myVec{E}$ and the displacement $\myVec{D}$ given by the Maxwell's equation
 
 $$
-\myVec{D} = {\epsilon}_{0}\myVec{E} + \myVec{P}
+\myVec{D} = \epsilon_0\myVec{E} + \myVec{P}
 $$
 
-As a result, the response of a dielectric medium is polarization. This effect is experimentally measured in terms of relative permitivity ${\epsilon}_{r}$ given by
+As a result, the response of a dielectric medium is polarization. This effect is experimentally measured in terms of relative permitivity $\epsilon_r$ given by
 
 $$
-\myVec{D} = {\epsilon}_{r}{\epsilon}_{0}\myVec{E},
+\myVec{D} = \epsilon_r\epsilon_0\myVec{E},
 $$
 
 so that
 
 $$
-{\epsilon}_{r}(\omega) = 1 + \chi (\omega) 
+\epsilon_r(\omega) = 1 + \chi (\omega) 
 $$
 
-If we define the plasma frequency ${\omega}_{p}$ as
+If we define the plasma frequency $\omega_p$ as
 
 $$
-{\omega}_{p}^2 = \frac{N e^2 }{m {\epsilon}_{0}},
+\omega_p^2 = \frac{N e^2 }{m \epsilon_0},
 $$
 
 then
 
 $$
-{\epsilon}_{r}(\omega) = 1 + \frac{{\omega}_{p}^2}{\omega^2 - \omega_0^2 + \iota \eta \omega}
+\epsilon_r(\omega) = 1 + \frac{\omega_p^2}{\omega^2 - \omega_0^2 + \iota \eta \omega}
 $$
 
 > This important equation says that relativity permitivity depends on the frequency of the field as well as the material's plasma frequency and damping factor.
@@ -188,49 +188,49 @@ $$
 Using the typical values of [plasma frequency](../basics/optical_properties_of_metals.ipynb#Estimate-of-plasma-frequency), [damping factor](../basics/optical_properties_of_metals.ipynb#Estimate-of-damping-factor), and $\omega_0 = 0$ for metals, we have
 
 $$
-{\omega}_{p} \sim 3 \,\mathrm{PHz},
+\omega_p \sim 3 \,\mathrm{PHz},
 $$
 
 $$
-\eta \sim 0.1 {\omega}_{p},
+\eta \sim 0.1 \omega_p,
 $$
 
 so that
 
 $$
-{\epsilon}_{r} = 1 + \frac{{\omega}_{p}^2}{- \omega^2  + \iota \eta \omega}
+\epsilon_r = 1 + \frac{\omega_p^2}{- \omega^2  + \iota \eta \omega}
 $$
 
 If we resolve this complex quantity into real and imaginary components as
 
 $$
-{\epsilon}_{r} = {\epsilon}_{real}  + \iota {\epsilon}_{imag},
+\epsilon_r = \epsilon_real  + \iota \epsilon_imag,
 $$
 
 where
 
 $$
-{\epsilon}_{real} = 1 - \frac{{\omega}_{p}^2}{\omega^2  + \eta^2},
+\epsilon_real = 1 - \frac{\omega_p^2}{\omega^2  + \eta^2},
 $$
 
 and
 
 $$
-{\epsilon}_{imag} = -  \frac{{\omega}_{p}^2}{\omega}\frac{\eta}{\omega^2  + \eta^2}.
+\epsilon_imag = -  \frac{\omega_p^2}{\omega}\frac{\eta}{\omega^2  + \eta^2}.
 $$
 
 In the special case of X-rays, for a wavelength of $1.54 \,\mathrm{A}^\circ$, the frequency is
 
-nearly $2000 \, \mathrm{PHz} \sim 650 {\omega}_{p}$. So unless there is anomalous dispersion, we have
+nearly $2000 \, \mathrm{PHz} \sim 650 \omega_p$. So unless there is anomalous dispersion, we have
 
 $$
-{\epsilon}_{real} = 1 - \frac{1}{650^2  + 0.1^2} = 1- 2.4\cdot 10^{-6},
+\epsilon_real = 1 - \frac{1}{650^2  + 0.1^2} = 1- 2.4\cdot 10^{-6},
 $$
 
 and
 
 $$
-{\epsilon}_{imag} = -  \frac{1}{650}\frac{0.1}{650^2  + 0.1^2} = -3.6\cdot 10^{-10}.
+\epsilon_imag = -  \frac{1}{650}\frac{0.1}{650^2  + 0.1^2} = -3.6\cdot 10^{-10}.
 $$
 
 
@@ -536,7 +536,7 @@ $$
 \delta + \iota \beta =  \frac{r_e \lambda^2 N_A}{2\pi M_a}  \rho  \left( f_1 + \iota f_2 \right)
 $$
 
-where ${M}_{a}$ is the atomic mass, $\rho$ is the density of material in \si{\gram\per\centi\metre\cubed}, ${r}_{e} = 2.818\, \mathrm{nm}$ is the classical radius of electron, $\lambda=$ 1.54 Å is the wavelength of photon. This gives a relation between the atomic scattering factors, the density and the refractive index as
+where $M_a$ is the atomic mass, $\rho$ is the density of material in \si{\gram\per\centi\metre\cubed}, $r_e = 2.818\, \mathrm{nm}$ is the classical radius of electron, $\lambda=$ 1.54 Å is the wavelength of photon. This gives a relation between the atomic scattering factors, the density and the refractive index as
 
 $$
 \delta + \iota \beta =  6.406 \cdot 10^{-6}  \rho \frac{  f_1 + \iota f_2 }{M_a}
