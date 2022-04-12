@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Ignore .bak files of notepad++
+*.bak
+
+# jupyter notebook checkpoints
+*.ipynb_checkpoints
