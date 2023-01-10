@@ -3,7 +3,8 @@ layout: post
 title: Optical properties of metals
 tags: xrr
 published: true
----{% include mathjax.html %}
+---
+
 # Optical properties of metals
 
 In this notebook, let us evaluate the optical properties of metals by modelling the metal as consisting of sea of electrons that are not bound to the lattice.

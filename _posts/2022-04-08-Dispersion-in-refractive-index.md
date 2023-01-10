@@ -4,7 +4,7 @@ title: Dispersion in refractive index
 tags: xrr
 published: true
 ---
-{% include mathjax.html %}
+
 
 # Dispersion in refractive index
 
