@@ -1,6 +1,7 @@
 <!-- References for configuring mathjax
 https://sgeos.github.io/github/jekyll/2016/08/21/adding_mathjax_to_a_jekyll_github_pages_blog.html
 -->
+{% if page.mathjax %}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -15,4 +16,4 @@ https://sgeos.github.io/github/jekyll/2016/08/21/adding_mathjax_to_a_jekyll_gith
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 >
 </script>
-</script>
+{% endif %}
